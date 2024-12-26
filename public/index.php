@@ -29,9 +29,11 @@ if (isset($_POST['submit'])) {
         } while ($stmt->rowCount() > 0);
 
         // Insert the new URL and short code into the database
-        $stmt = $conn->prepare("INSERT INTO urls (original_url, short_code) VALUES (:url, :short_code)");
+        $stmt = $conn->prepare("INSERT INTO urls (original_url, short_code, expiration_dt) VALUES (:url, :short_code, :expiration_dt)");
         $stmt->bindParam(':url', $original_url);
         $stmt->bindParam(':short_code', $short_code);
+        $expiration_dt = date('Y-m-d H:i:s', strtotime('+7 days'));
+        $stmt->bindParam(':expiration_dt', $expiration_dt);
         $stmt->execute();
     }
 
