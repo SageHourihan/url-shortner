@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
         $stmt->execute();
     }
 
-    $short_url = "http://localhost/url-shortener/redirect.php?c=$short_code";
+    $short_url = "http://192.168.64.11/url-shortener/redirect.php?c=$short_code";
     echo "Shortened URL: <a href='$short_url'>$short_url</a>";
 }
 
