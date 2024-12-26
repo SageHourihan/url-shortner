@@ -1,5 +1,5 @@
 <?php 
-include_once 'config/db.php';
+include_once '../config/db.php';
 
 function generateShortCode($length = 6) {
     return substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, $length);
@@ -38,14 +38,10 @@ if (isset($_POST['submit'])) {
     $short_url = "http://localhost/url-shortener/redirect.php?c=$short_code";
     echo "Shortened URL: <a href='$short_url'>$short_url</a>";
 }
+
+include_once '../views/header.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>URL Shortener</title>
-</head>
 <body>
     <h2>Enter a URL to shorten:</h2>
     <form method="post" action="">
@@ -53,4 +49,5 @@ if (isset($_POST['submit'])) {
         <button type="submit" name="submit">Shorten</button>
     </form>
 </body>
-</html>
+
+<?php include_once '../views/footer.php' ?>

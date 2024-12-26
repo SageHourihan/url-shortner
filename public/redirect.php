@@ -1,5 +1,5 @@
 <?php
-include 'config/db.php';
+include '../config/db.php';
 
 if (isset($_GET['c'])) {
     $code = $_GET['c'];
