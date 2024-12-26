@@ -1,5 +1,5 @@
 <?php 
-include_once 'db.php';
+include_once 'config/db.php';
 
 function generateShortCode($length = 6) {
     return substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"), 0, $length);
