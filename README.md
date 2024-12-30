@@ -9,8 +9,6 @@ The primary goal of this project is to:
 - **Enhance Backend Development Skills**: Focus on building and managing a backend system using PHP and MySQL.
 - **Learn Self-Hosting on LAMP**: Gain hands-on experience with LAMP (Linux, Apache, MySQL, PHP) to host a dynamic web application on a local server.
   
-This will be a private repository, and the project is intended to be self-hosted for personal use and learning purposes.
-
 ## Features
 
 - **Generate Short URLs**: Convert long URLs into shorter, more manageable links.
